@@ -1,0 +1,492 @@
+
+/* ==============================
+   RFB CUSTOMER AUTHENTICATION
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #17243b;
+}
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* LEFT BRANDING PANEL */
+
+.auth-brand {
+    width: 48%;
+    min-height: 100vh;
+    padding: 45px 8%;
+
+    background-color: #14233d;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 19px;
+    letter-spacing: 1px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.auth-logo strong {
+    color: #d7b56f;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #c39a52;
+    color: #14233d;
+
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.brand-content {
+    max-width: 480px;
+    position: relative;
+    z-index: 2;
+}
+
+.brand-label {
+    color: #d7b56f;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.brand-content h1 {
+    font-size: 48px;
+    line-height: 1.25;
+    margin-bottom: 22px;
+}
+
+.brand-content h1 span {
+    color: #d7b56f;
+}
+
+.brand-content > p:last-child {
+    color: #c5cedc;
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 420px;
+}
+
+.brand-footer {
+    color: #b8c2d1;
+    font-size: 13px;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* DECORATIVE CIRCLES */
+
+.brand-decoration {
+    position: absolute;
+    border: 1px solid rgba(215, 181, 111, 0.2);
+    border-radius: 50%;
+}
+
+.decoration-one {
+    width: 400px;
+    height: 400px;
+    right: -180px;
+    top: 15%;
+}
+
+.decoration-two {
+    width: 280px;
+    height: 280px;
+    right: -120px;
+    top: 27%;
+}
+
+
+/* RIGHT LOGIN PANEL */
+
+.auth-form-section {
+    width: 52%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px 25px;
+    background-color: #ffffff;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.back-home {
+    display: inline-block;
+    color: #667085;
+    font-size: 13px;
+    text-decoration: none;
+    margin-bottom: 55px;
+}
+
+.back-home:hover {
+    color: #c39a52;
+}
+
+
+/* FORM HEADING */
+
+.form-heading {
+    margin-bottom: 35px;
+}
+
+.section-label {
+    color: #b58a42;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 13px;
+}
+
+.form-heading h2 {
+    color: #14233d;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.form-heading > p:last-child {
+    color: #7b8494;
+    font-size: 14px;
+}
+
+
+/* INPUT FIELDS */
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+.form-group label {
+    display: block;
+    color: #26344b;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 52px;
+
+    border: 1px solid #dfe3e9;
+    border-radius: 6px;
+
+    padding: 0 15px;
+    font-size: 14px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #c39a52;
+    box-shadow: 0 0 0 3px rgba(195, 154, 82, 0.12);
+}
+
+.form-group input::placeholder {
+    color: #a6adba;
+}
+
+
+/* PASSWORD FIELD */
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 65px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: none;
+    background: none;
+
+    color: #a77d36;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* FORM OPTIONS */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 5px 0 28px;
+    font-size: 12px;
+}
+
+.remember-option {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #667085;
+}
+
+.remember-option input {
+    accent-color: #14233d;
+}
+
+.forgot-link {
+    color: #a77d36;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* SIGN IN BUTTON */
+
+.sign-in-btn {
+    width: 100%;
+    height: 53px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #14233d;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sign-in-btn:hover {
+    background-color: #c39a52;
+}
+
+
+/* FORM MESSAGE */
+
+.form-message {
+    font-size: 13px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.form-message.error {
+    color: #c0392b;
+}
+
+
+/* REGISTER LINK */
+
+.register-link {
+    text-align: center;
+    margin-top: 30px;
+
+    color: #7b8494;
+    font-size: 13px;
+}
+
+.register-link a {
+    color: #a77d36;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* SECURITY NOTE */
+
+.security-note {
+    margin-top: 55px;
+    padding-top: 20px;
+
+    border-top: 1px solid #eeeeee;
+
+    color: #8a93a1;
+    font-size: 12px;
+    text-align: center;
+}
+
+.security-note span {
+    color: #c39a52;
+    margin-right: 5px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+
+    .auth-brand {
+        width: 40%;
+        padding: 35px 5%;
+    }
+
+    .auth-form-section {
+        width: 60%;
+    }
+
+    .brand-content h1 {
+        font-size: 37px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .auth-page {
+        flex-direction: column;
+    }
+
+    .auth-brand {
+        width: 100%;
+        min-height: 300px;
+        padding: 30px;
+    }
+
+    .brand-content {
+        margin: 45px 0;
+    }
+
+    .brand-content h1 {
+        font-size: 34px;
+    }
+
+    .brand-footer {
+        margin-top: 10px;
+    }
+
+    .auth-form-section {
+        width: 100%;
+        min-height: auto;
+        padding: 45px 25px;
+    }
+
+    .back-home {
+        margin-bottom: 35px;
+    }
+
+    .security-note {
+        margin-top: 35px;
+    }
+
+}
+
+
+/* ==============================
+   REGISTRATION PAGE
+================================= */
+
+.register-section {
+    align-items: flex-start;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.register-container {
+    max-width: 450px;
+}
+
+.register-container .back-home {
+    margin-bottom: 30px;
+}
+
+.register-container .form-heading {
+    margin-bottom: 25px;
+}
+
+.register-container .form-heading h2 {
+    font-size: 32px;
+}
+
+.register-container .form-group {
+    margin-bottom: 17px;
+}
+
+.register-container .form-group input {
+    height: 48px;
+}
+
+.input-hint {
+    display: block;
+    color: #8a93a1;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+.terms-option {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 22px 0;
+}
+
+.terms-option input {
+    accent-color: #14233d;
+}
+
+.terms-option label {
+    color: #667085;
+    font-size: 12px;
+}
+
+.register-container .security-note {
+    margin-top: 30px;
+}
+
+@media (max-width: 650px) {
+
+    .register-section {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .register-container .back-home {
+        margin-bottom: 30px;
+    }
+
+}

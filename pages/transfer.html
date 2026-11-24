@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transfer Funds | RFB</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/banking.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="../index.html" class="sidebar-logo">
+                <span class="logo-icon">R</span>
+                <span>ROYAL <strong>FINANCE</strong></span>
+            </a>
+
+            <div class="sidebar-heading">MAIN MENU</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="dashboard.html#account" class="nav-item">
+                    <span class="nav-icon">▣</span>
+                    My Account
+                </a>
+
+                <a href="deposit.html" class="nav-item">
+                    <span class="nav-icon">＋</span>
+                    Deposit Money
+                </a>
+
+                <a href="withdraw.html" class="nav-item">
+                    <span class="nav-icon">－</span>
+                    Withdraw Money
+                </a>
+
+                <a href="transfer.html" class="nav-item active">
+                    <span class="nav-icon">⇄</span>
+                    Transfer Funds
+                </a>
+
+                <a href="transactions.html" class="nav-item">
+                    <span class="nav-icon">▤</span>
+                    Transactions
+                </a>
+
+            </nav>
+
+            <div class="sidebar-heading account-heading">ACCOUNT</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="profile.html" class="nav-item">
+                    <span class="nav-icon">♙</span>
+                    My Profile
+                </a>
+
+                <a href="login.html" class="nav-item logout-link">
+                    <span class="nav-icon">↪</span>
+                    Logout
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-footer-logo">RFB</div>
+                <p>Royal Finance Bank</p>
+                <span>Banking with Trust.</span>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button class="menu-toggle" id="menuToggle"
+                        aria-label="Open navigation menu">
+                        ☰
+                    </button>
+
+                    <div>
+                        <p class="topbar-label">CUSTOMER PORTAL</p>
+                        <h2>Transfer Funds</h2>
+                    </div>
+
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="welcome-text">
+                        <span>Welcome back,</span>
+                        <strong>Customer</strong>
+                    </div>
+
+                    <div class="profile-avatar">C</div>
+
+                </div>
+
+            </header>
+
+
+            <!-- PAGE BODY -->
+            <div class="dashboard-body">
+
+                <!-- PAGE INTRO -->
+                <section class="banking-intro">
+
+                    <div>
+                        <p class="banking-breadcrumb">
+                            Dashboard / Transfer Funds
+                        </p>
+
+                        <h1>Transfer Funds</h1>
+
+                        <p>
+                            Send funds to another account quickly and securely.
+                        </p>
+                    </div>
+
+                    <div class="banking-intro-icon">
+                        ⇄
+                    </div>
+
+                </section>
+
+
+                <!-- ACCOUNT SUMMARY -->
+                <section class="deposit-summary">
+
+                    <div class="deposit-summary-icon">
+                        ▣
+                    </div>
+
+                    <div>
+                        <p>Transfer From</p>
+                        <h3>Personal Account</h3>
+                        <span>Account Number: **** **** 4582</span>
+                    </div>
+
+                    <div class="deposit-summary-status">
+                        <span class="active-dot"></span>
+                        Active
+                    </div>
+
+                </section>
+
+
+                <!-- TRANSFER AREA -->
+                <section class="deposit-layout">
+
+                    <!-- TRANSFER FORM -->
+                    <div class="deposit-form-card">
+
+                        <div class="banking-section-heading">
+                            <h2>Transfer Details</h2>
+
+                            <p>
+                                Enter the recipient's information and transfer amount.
+                            </p>
+                        </div>
+
+
+                        <form id="transferForm">
+
+                            <div class="form-group">
+
+                                <label for="recipientName">
+                                    Recipient Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="recipientName"
+                                    name="recipientName"
+                                    placeholder="Enter recipient's full name"
+                                    maxlength="60"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="recipientAccount">
+                                    Recipient Account Number
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="recipientAccount"
+                                    name="recipientAccount"
+                                    placeholder="Enter recipient's account number"
+                                    maxlength="24"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="transferAmount">
+                                    Transfer Amount (PKR)
+                                </label>
+
+                                <div class="amount-input-wrapper">
+
+                                    <span>PKR</span>
+
+                                    <input
+                                        type="number"
+                                        id="transferAmount"
+                                        name="amount"
+                                        placeholder="Enter amount"
+                                        min="1"
+                                        step="1"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>
+                                    Available balance: PKR 125,000.00
+                                </small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="transferNote">
+                                    Transfer Description (Optional)
+                                </label>
+
+                                <textarea
+                                    id="transferNote"
+                                    name="description"
+                                    rows="3"
+                                    placeholder="What is this transfer for?"
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="deposit-notice">
+                                <span>ⓘ</span>
+
+                                <p>
+                                    Please verify the recipient's name and
+                                    account number before submitting.
+                                </p>
+                            </div>
+
+
+                            <button type="submit" class="deposit-submit-btn">
+                                Confirm Transfer →
+                            </button>
+
+                        </form>
+
+
+                        <!-- RESULT MESSAGE -->
+                        <div
+                            id="transferMessage"
+                            class="deposit-message"
+                            role="status"
+                            aria-live="polite">
+                        </div>
+
+                    </div>
+
+
+                    <!-- INFORMATION CARD -->
+                    <aside class="deposit-info-card">
+
+                        <div class="deposit-info-icon">
+                            ⇄
+                        </div>
+
+                        <h3>Secure Fund Transfer</h3>
+
+                        <p>
+                            Always verify the recipient's account information
+                            before making a transfer.
+                        </p>
+
+                        <div class="info-divider"></div>
+
+                        <h4>Transfer Information</h4>
+
+                        <ul>
+                            <li>Enter the correct recipient name.</li>
+                            <li>Check the recipient account number.</li>
+                            <li>Enter a valid transfer amount.</li>
+                            <li>Make sure sufficient balance is available.</li>
+                            <li>Review all details before confirming.</li>
+                        </ul>
+
+                        <div class="info-divider"></div>
+
+                        <div class="support-info">
+                            <span>Need assistance?</span>
+                            <strong>Contact Bank Support</strong>
+                        </div>
+
+                    </aside>
+
+                </section>
+
+
+                <!-- FOOTER -->
+                <footer class="dashboard-footer">
+
+                    <p>© 2026 Royal Finance Bank. Educational Project.</p>
+
+                    <span>Banking with Trust. Growing with You.</span>
+
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/transfer.js"></script>
+
+</body>
+</html>

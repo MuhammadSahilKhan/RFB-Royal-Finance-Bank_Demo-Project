@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transaction History | RFB</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/banking.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="../index.html" class="sidebar-logo">
+                <span class="logo-icon">R</span>
+                <span>ROYAL <strong>FINANCE</strong></span>
+            </a>
+
+            <div class="sidebar-heading">MAIN MENU</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="dashboard.html#account" class="nav-item">
+                    <span class="nav-icon">▣</span>
+                    My Account
+                </a>
+
+                <a href="deposit.html" class="nav-item">
+                    <span class="nav-icon">＋</span>
+                    Deposit Money
+                </a>
+
+                <a href="withdraw.html" class="nav-item">
+                    <span class="nav-icon">－</span>
+                    Withdraw Money
+                </a>
+
+                <a href="transfer.html" class="nav-item">
+                    <span class="nav-icon">⇄</span>
+                    Transfer Funds
+                </a>
+
+                <a href="transactions.html" class="nav-item active">
+                    <span class="nav-icon">▤</span>
+                    Transactions
+                </a>
+
+            </nav>
+
+            <div class="sidebar-heading account-heading">ACCOUNT</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="profile.html" class="nav-item">
+                    <span class="nav-icon">♙</span>
+                    My Profile
+                </a>
+
+                <a href="login.html" class="nav-item logout-link">
+                    <span class="nav-icon">↪</span>
+                    Logout
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-footer-logo">RFB</div>
+                <p>Royal Finance Bank</p>
+                <span>Banking with Trust.</span>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button class="menu-toggle" id="menuToggle"
+                        aria-label="Open navigation menu">
+                        ☰
+                    </button>
+
+                    <div>
+                        <p class="topbar-label">CUSTOMER PORTAL</p>
+                        <h2>Transaction History</h2>
+                    </div>
+
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="welcome-text">
+                        <span>Welcome back,</span>
+                        <strong>Customer</strong>
+                    </div>
+
+                    <div class="profile-avatar">C</div>
+
+                </div>
+
+            </header>
+
+
+            <!-- PAGE BODY -->
+            <div class="dashboard-body">
+
+                <!-- PAGE INTRO -->
+                <section class="banking-intro">
+
+                    <div>
+                        <p class="banking-breadcrumb">
+                            Dashboard / Transactions
+                        </p>
+
+                        <h1>Transaction History</h1>
+
+                        <p>
+                            View and track all your recent banking activities.
+                        </p>
+                    </div>
+
+                    <div class="banking-intro-icon">
+                        ▤
+                    </div>
+
+                </section>
+
+
+                <!-- ACCOUNT SUMMARY -->
+                <section class="deposit-summary">
+
+                    <div class="deposit-summary-icon">
+                        ▣
+                    </div>
+
+                    <div>
+                        <p>Transaction Account</p>
+                        <h3>Personal Account</h3>
+                        <span>Account Number: **** **** 4582</span>
+                    </div>
+
+                    <div class="deposit-summary-status">
+                        <span class="active-dot"></span>
+                        Active
+                    </div>
+
+                </section>
+
+
+                <!-- TRANSACTION HISTORY CARD -->
+                <section class="transactions-card">
+
+                    <div class="banking-section-heading">
+
+                        <h2>All Transactions</h2>
+
+                        <p>
+                            Review and search your account activity.
+                        </p>
+
+                    </div>
+
+
+                    <!-- SEARCH AND FILTERS -->
+                    <div class="transaction-filters">
+
+                        <input
+                            type="text"
+                            id="searchTransaction"
+                            placeholder="Search transactions..."
+                        >
+
+                        <select id="typeFilter">
+
+                            <option value="all">All Types</option>
+
+                            <option value="deposit">Deposit</option>
+
+                            <option value="withdrawal">Withdrawal</option>
+
+                            <option value="transfer">Transfer</option>
+
+                        </select>
+
+                        <button type="button" id="resetFilters">
+                            Reset
+                        </button>
+
+                    </div>
+
+
+                    <!-- TRANSACTION TABLE -->
+                    <div class="transaction-table-wrapper">
+
+                        <table class="transaction-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Transaction ID</th>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="transactionTableBody">
+                            </tbody>
+
+                        </table>
+
+                        <p id="noTransactions" class="no-transactions">
+                            No transactions found.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- FOOTER -->
+                <footer class="dashboard-footer">
+
+                    <p>
+                        © 2026 Royal Finance Bank. Educational Project.
+                    </p>
+
+                    <span>
+                        Banking with Trust. Growing with You.
+                    </span>
+
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/transactions.js"></script>
+
+</body>
+</html>

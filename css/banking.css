@@ -1,0 +1,943 @@
+
+/* ==============================
+   RFB BANKING PAGES
+================================= */
+
+
+/* PAGE INTRO */
+
+.banking-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+.banking-breadcrumb {
+    color: #b58a42;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.banking-intro h1 {
+    color: #14233d;
+    font-size: 27px;
+    margin-bottom: 9px;
+}
+
+.banking-intro p:last-child {
+    color: #7b8494;
+    font-size: 13px;
+}
+
+.banking-intro-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f5efe4;
+    color: #a77d36;
+
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+
+/* ACCOUNT SUMMARY */
+
+.deposit-summary {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background-color: #ffffff;
+    border: 1px solid #e9ebef;
+    border-radius: 9px;
+
+    padding: 20px 23px;
+    margin-bottom: 30px;
+}
+
+.deposit-summary-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f5efe4;
+    color: #a77d36;
+
+    border-radius: 8px;
+    font-size: 22px;
+}
+
+.deposit-summary p {
+    color: #8992a0;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.deposit-summary h3 {
+    color: #14233d;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.deposit-summary span {
+    color: #8992a0;
+    font-size: 11px;
+}
+
+.deposit-summary-status {
+    margin-left: auto;
+
+    background-color: #e8f5ee;
+    color: #278453;
+
+    padding: 8px 13px;
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.active-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+
+    background-color: #278453;
+    border-radius: 50%;
+
+    margin-right: 5px;
+}
+
+
+/* DEPOSIT LAYOUT */
+
+.deposit-layout {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 22px;
+
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+
+/* DEPOSIT FORM CARD */
+
+.deposit-form-card {
+    background-color: #ffffff;
+    border: 1px solid #e9ebef;
+    border-radius: 9px;
+
+    padding: 28px;
+}
+
+.banking-section-heading {
+    margin-bottom: 28px;
+}
+
+.banking-section-heading h2 {
+    color: #14233d;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.banking-section-heading p {
+    color: #8992a0;
+    font-size: 12px;
+}
+
+
+/* FORM ELEMENTS */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #26344b;
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border: 1px solid #dfe3e9;
+    border-radius: 6px;
+
+    padding: 13px 14px;
+
+    background-color: #ffffff;
+    color: #26344b;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #c39a52;
+    box-shadow: 0 0 0 3px rgba(195, 154, 82, 0.10);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group small {
+    display: block;
+    color: #929aa6;
+    font-size: 10px;
+    margin-top: 8px;
+}
+
+.amount-input-wrapper {
+    display: flex;
+    align-items: center;
+
+    border: 1px solid #dfe3e9;
+    border-radius: 6px;
+
+    overflow: hidden;
+}
+
+.amount-input-wrapper:focus-within {
+    border-color: #c39a52;
+    box-shadow: 0 0 0 3px rgba(195, 154, 82, 0.10);
+}
+
+.amount-input-wrapper span {
+    padding: 13px 14px;
+
+    background-color: #f5f6f8;
+    color: #a77d36;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.amount-input-wrapper input {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.amount-input-wrapper input:focus {
+    border: none;
+    box-shadow: none;
+}
+
+
+/* NOTICE */
+
+.deposit-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    background-color: #f5f8fc;
+    border-left: 3px solid #c39a52;
+
+    padding: 13px;
+    margin-bottom: 22px;
+}
+
+.deposit-notice span {
+    color: #a77d36;
+    font-size: 17px;
+}
+
+.deposit-notice p {
+    color: #68768a;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* SUBMIT BUTTON */
+
+.deposit-submit-btn {
+    width: 100%;
+
+    background-color: #14233d;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 15px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.deposit-submit-btn:hover {
+    background-color: #263957;
+    transform: translateY(-2px);
+}
+
+
+/* RESULT MESSAGE */
+
+.deposit-message {
+    display: none;
+
+    margin-top: 20px;
+    padding: 14px;
+
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.deposit-message.success {
+    display: block;
+    background-color: #e8f5ee;
+    color: #278453;
+    border: 1px solid #c9e8d6;
+}
+
+.deposit-message.error {
+    display: block;
+    background-color: #f9ecea;
+    color: #bf5146;
+    border: 1px solid #f0d1cd;
+}
+
+
+/* INFORMATION CARD */
+
+.deposit-info-card {
+    background-color: #14233d;
+    color: #ffffff;
+
+    border-radius: 9px;
+    padding: 27px;
+}
+
+.deposit-info-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #263957;
+    color: #d7b56f;
+
+    border-radius: 8px;
+    font-size: 22px;
+
+    margin-bottom: 18px;
+}
+
+.deposit-info-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.deposit-info-card > p {
+    color: #b8c3d2;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.info-divider {
+    height: 1px;
+    background-color: #34445e;
+    margin: 22px 0;
+}
+
+.deposit-info-card h4 {
+    color: #d7b56f;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.deposit-info-card ul {
+    padding-left: 17px;
+}
+
+.deposit-info-card li {
+    color: #c3ccda;
+    font-size: 11px;
+    line-height: 1.8;
+    margin-bottom: 9px;
+}
+
+.support-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.support-info span {
+    color: #aab5c5;
+    font-size: 11px;
+}
+
+.support-info strong {
+    color: #d7b56f;
+    font-size: 13px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .deposit-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .banking-intro h1 {
+        font-size: 23px;
+    }
+
+    .banking-intro-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .deposit-summary {
+        padding: 16px;
+        gap: 10px;
+    }
+
+    .deposit-summary-status {
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+
+    .deposit-form-card,
+    .deposit-info-card {
+        padding: 20px;
+    }
+
+}
+
+/* ==============================
+   TRANSACTION HISTORY
+================================= */
+
+
+/* TRANSACTION CARD */
+
+.transactions-card {
+    background-color: #ffffff;
+    border: 1px solid #e9ebef;
+    border-radius: 9px;
+
+    padding: 28px;
+    margin-bottom: 35px;
+}
+
+
+/* SEARCH AND FILTERS */
+
+.transaction-filters {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-bottom: 25px;
+}
+
+.transaction-filters input,
+.transaction-filters select {
+    height: 43px;
+
+    border: 1px solid #dfe3e9;
+    border-radius: 6px;
+
+    padding: 0 14px;
+
+    background-color: #ffffff;
+    color: #26344b;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+.transaction-filters input {
+    flex: 1;
+    min-width: 180px;
+}
+
+.transaction-filters select {
+    width: 190px;
+    cursor: pointer;
+}
+
+.transaction-filters input:focus,
+.transaction-filters select:focus {
+    border-color: #c39a52;
+    box-shadow: 0 0 0 3px rgba(195, 154, 82, 0.10);
+}
+
+.transaction-filters button {
+    height: 43px;
+
+    padding: 0 25px;
+
+    background-color: #14233d;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.transaction-filters button:hover {
+    background-color: #263957;
+    transform: translateY(-2px);
+}
+
+
+/* TRANSACTION TABLE */
+
+.transaction-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+.transaction-table thead {
+    background-color: #f5f6f8;
+}
+
+.transaction-table th {
+    color: #26344b;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    text-align: left;
+    white-space: nowrap;
+
+    padding: 16px 13px;
+
+    border-bottom: 1px solid #e9ebef;
+}
+
+.transaction-table td {
+    color: #68768a;
+
+    font-size: 11px;
+    text-align: left;
+    white-space: nowrap;
+
+    padding: 17px 13px;
+
+    border-bottom: 1px solid #edf0f3;
+}
+
+.transaction-table tbody tr {
+    transition: 0.2s;
+}
+
+.transaction-table tbody tr:hover {
+    background-color: #fafbfc;
+}
+
+
+/* TRANSACTION TYPE */
+
+.transaction-type {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.transaction-type.deposit {
+    color: #278453;
+}
+
+.transaction-type.withdrawal,
+.transaction-type.transfer {
+    color: #bf5146;
+}
+
+
+/* TRANSACTION AMOUNTS */
+
+.amount-credit {
+    color: #278453 !important;
+    font-weight: bold;
+}
+
+.amount-debit {
+    color: #bf5146 !important;
+    font-weight: bold;
+}
+
+
+/* TRANSACTION STATUS */
+
+.transaction-status {
+    display: inline-block;
+
+    background-color: #e8f5ee;
+    color: #278453;
+
+    padding: 7px 12px;
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+/* NO TRANSACTIONS MESSAGE */
+
+.no-transactions {
+    display: none;
+
+    text-align: center;
+    color: #8992a0;
+
+    font-size: 12px;
+
+    padding: 25px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .transactions-card {
+        padding: 22px;
+    }
+
+    .transaction-filters {
+        flex-wrap: wrap;
+    }
+
+    .transaction-filters input {
+        flex-basis: 100%;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .transactions-card {
+        padding: 18px;
+    }
+
+    .transaction-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .transaction-filters input,
+    .transaction-filters select,
+    .transaction-filters button {
+        width: 100%;
+    }
+
+}
+
+/* ==============================
+   MY PROFILE PAGE
+================================= */
+
+
+/* PROFILE HEADER */
+
+.profile-header-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background-color: #ffffff;
+    border: 1px solid #e9ebef;
+    border-radius: 9px;
+
+    padding: 23px;
+    margin-bottom: 25px;
+}
+
+.profile-large-avatar {
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f5efe4;
+    color: #a77d36;
+
+    border-radius: 50%;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.profile-header-info {
+    flex: 1;
+}
+
+.profile-header-info h2 {
+    color: #14233d;
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.profile-header-info p {
+    color: #8992a0;
+    font-size: 12px;
+    margin-bottom: 9px;
+}
+
+.profile-member-status {
+    display: inline-block;
+    color: #278453;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* EDIT PROFILE BUTTON */
+
+.profile-edit-btn {
+    background-color: #f5efe4;
+    color: #a77d36;
+
+    border: 1px solid #eadcc4;
+    border-radius: 6px;
+
+    padding: 11px 18px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-edit-btn:hover {
+    background-color: #eadcc4;
+}
+
+
+/* PROFILE FORM CARD */
+
+.profile-form-card {
+    background-color: #ffffff;
+    border: 1px solid #e9ebef;
+    border-radius: 9px;
+
+    padding: 28px;
+    margin-bottom: 25px;
+}
+
+
+/* PROFILE FORM GRID */
+
+.profile-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 22px;
+}
+
+.profile-form-grid .form-group {
+    margin-bottom: 22px;
+}
+
+.profile-form-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* READ ONLY FIELDS */
+
+.profile-form-card input[readonly],
+.profile-form-card textarea[readonly] {
+    background-color: #f8f9fb;
+    color: #68768a;
+    cursor: default;
+}
+
+
+/* EDITABLE FIELDS */
+
+.profile-form-card input:not([readonly]),
+.profile-form-card textarea:not([readonly]) {
+    background-color: #ffffff;
+    color: #26344b;
+    border-color: #c39a52;
+}
+
+
+/* PROFILE ACTION BUTTONS */
+
+.profile-form-actions {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.profile-save-btn {
+    background-color: #14233d;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 14px 24px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-save-btn:hover {
+    background-color: #263957;
+    transform: translateY(-2px);
+}
+
+.profile-cancel-btn {
+    background-color: #f5f6f8;
+    color: #68768a;
+
+    border: 1px solid #dfe3e9;
+    border-radius: 6px;
+
+    padding: 13px 22px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.profile-cancel-btn:hover {
+    background-color: #e9ebef;
+}
+
+
+/* ACCOUNT DETAILS */
+
+.profile-detail-item {
+    background-color: #f8f9fb;
+    border: 1px solid #edf0f3;
+    border-radius: 7px;
+
+    padding: 18px;
+    margin-bottom: 15px;
+}
+
+.profile-detail-item p {
+    color: #8992a0;
+    font-size: 11px;
+    margin-bottom: 9px;
+}
+
+.profile-detail-item h3 {
+    color: #14233d;
+    font-size: 14px;
+}
+
+.profile-active-text {
+    color: #278453 !important;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 700px) {
+
+    .profile-header-card {
+        flex-wrap: wrap;
+    }
+
+    .profile-edit-btn {
+        width: 100%;
+    }
+
+    .profile-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-form-grid .full-width {
+        grid-column: auto;
+    }
+
+    .profile-form-card {
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .profile-large-avatar {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+    }
+
+    .profile-header-info h2 {
+        font-size: 15px;
+    }
+
+    .profile-form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .profile-save-btn,
+    .profile-cancel-btn {
+        width: 100%;
+    }
+
+}

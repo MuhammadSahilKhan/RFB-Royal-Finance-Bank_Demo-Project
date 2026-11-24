@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Login | RFB</title>
+
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+
+    <main class="auth-page">
+
+        <!-- Left Branding Panel -->
+        <section class="auth-brand">
+
+            <a href="../index.html" class="auth-logo">
+                <span class="logo-icon">R</span>
+                <span>ROYAL <strong>FINANCE</strong></span>
+            </a>
+
+            <div class="brand-content">
+                <p class="brand-label">ROYAL FINANCE BANK</p>
+
+                <h1>
+                    Welcome Back to
+                    <span>Smarter Banking.</span>
+                </h1>
+
+                <p>
+                    Your financial journey continues here.
+                    Access your account and manage your
+                    banking activities with confidence.
+                </p>
+            </div>
+
+            <div class="brand-footer">
+                Banking with Trust. Growing with You.
+            </div>
+
+            <div class="brand-decoration decoration-one"></div>
+            <div class="brand-decoration decoration-two"></div>
+
+        </section>
+
+
+        <!-- Right Login Panel -->
+        <section class="auth-form-section">
+
+            <div class="login-container">
+
+                <a href="../index.html" class="back-home">
+                    ← Back to Home
+                </a>
+
+                <div class="form-heading">
+                    <p class="section-label">CUSTOMER PORTAL</p>
+                    <h2>Sign In</h2>
+
+                    <p>
+                        Enter your account details to continue.
+                    </p>
+                </div>
+
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+
+                        <div class="password-wrapper">
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                class="toggle-password"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="form-options">
+
+                        <label class="remember-option">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+
+                        <a href="#" class="forgot-link">
+                            Forgot password?
+                        </a>
+
+                    </div>
+
+
+                    <button type="submit" class="sign-in-btn">
+                        Sign In
+                    </button>
+
+                    <p id="formMessage" class="form-message" role="status"></p>
+
+                </form>
+
+
+                <div class="register-link">
+                    Don't have an account?
+                    <a href="register.html">Create an account</a>
+                </div>
+
+                <div class="security-note">
+                    <span>◆</span>
+                    Secure customer access
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/auth.js"></script>
+
+</body>
+</html>

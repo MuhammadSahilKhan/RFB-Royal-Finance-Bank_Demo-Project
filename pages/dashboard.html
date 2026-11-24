@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Dashboard | RFB</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="../index.html" class="sidebar-logo">
+                <span class="logo-icon">R</span>
+                <span>ROYAL <strong>FINANCE</strong></span>
+            </a>
+
+            <div class="sidebar-heading">MAIN MENU</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-item active">
+                    <span class="nav-icon">⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="dashboard.html#account" class="nav-item">
+                    <span class="nav-icon">▣</span>
+                    My Account
+                </a>
+
+                <a href="deposit.html" class="nav-item">
+                    <span class="nav-icon">＋</span>
+                    Deposit Money
+                </a>
+
+                <a href="withdraw.html" class="nav-item">
+                    <span class="nav-icon">－</span>
+                    Withdraw Money
+                </a>
+
+                <a href="transfer.html" class="nav-item">
+                    <span class="nav-icon">⇄</span>
+                    Transfer Funds
+                </a>
+
+                <a href="transactions.html" class="nav-item">
+                    <span class="nav-icon">▤</span>
+                    Transactions
+                </a>
+
+            </nav>
+
+            <div class="sidebar-heading account-heading">ACCOUNT</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="profile.html" class="nav-item">
+                    <span class="nav-icon">♙</span>
+                    My Profile
+                </a>
+
+                <a href="login.html" class="nav-item logout-link">
+                    <span class="nav-icon">↪</span>
+                    Logout
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-footer-logo">RFB</div>
+                <p>Royal Finance Bank</p>
+                <span>Banking with Trust.</span>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <div class="topbar-left">
+                    <button class="menu-toggle" id="menuToggle"
+                        aria-label="Open navigation menu">
+                        ☰
+                    </button>
+
+                    <div>
+                        <p class="topbar-label">CUSTOMER PORTAL</p>
+                        <h2>Dashboard</h2>
+                    </div>
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="welcome-text">
+                        <span>Welcome back,</span>
+                        <strong>Customer</strong>
+                    </div>
+
+                    <div class="profile-avatar">C</div>
+
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD BODY -->
+            <div class="dashboard-body">
+
+                <!-- WELCOME -->
+                <section class="welcome-section">
+                    <div>
+                        <p class="welcome-date" id="currentDate"></p>
+                        <h1>Good to see you again!</h1>
+                        <p>
+                            Here's an overview of your banking activity.
+                        </p>
+                    </div>
+                </section>
+
+
+                <!-- SUMMARY CARDS -->
+                <section class="summary-grid" id="account">
+
+                    <div class="summary-card balance-card">
+
+                        <div class="summary-top">
+                            <span>Total Account Balance</span>
+
+                            <button id="balanceToggle"
+                                class="balance-toggle"
+                                aria-label="Hide account balance">
+                                Hide
+                            </button>
+                        </div>
+
+                        <h2 id="accountBalance">PKR 125,000.00</h2>
+
+                        <p class="account-number">
+                            Account Number: **** **** 4582
+                        </p>
+
+                        <div class="balance-footer">
+                            <span>ROYAL FINANCE BANK</span>
+                            <span>RFB</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-card info-card">
+                        <div class="info-icon gold-icon">▣</div>
+                        <p>Account Status</p>
+                        <h3>Active</h3>
+                        <span class="status-label">Account operational</span>
+                    </div>
+
+
+                    <div class="summary-card info-card">
+                        <div class="info-icon blue-icon">▤</div>
+                        <p>Account Type</p>
+                        <h3>Personal</h3>
+                        <span class="status-label">Customer Account</span>
+                    </div>
+
+                </section>
+
+
+                <!-- QUICK ACTIONS -->
+                <section class="dashboard-section">
+
+                    <div class="section-title">
+                        <div>
+                            <h2>Quick Actions</h2>
+                            <p>Manage your money easily.</p>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+
+                        <a href="deposit.html" class="action-card">
+                            <span class="action-icon deposit-icon">＋</span>
+                            <strong>Deposit Money</strong>
+                            <span>Add funds to your account</span>
+                        </a>
+
+                        <a href="withdraw.html" class="action-card">
+                            <span class="action-icon withdraw-icon">－</span>
+                            <strong>Withdraw Money</strong>
+                            <span>Withdraw from your account</span>
+                        </a>
+
+                        <a href="transfer.html" class="action-card">
+                            <span class="action-icon transfer-icon">⇄</span>
+                            <strong>Transfer Funds</strong>
+                            <span>Send money to another account</span>
+                        </a>
+
+                        <a href="transactions.html" class="action-card">
+                            <span class="action-icon history-icon">▤</span>
+                            <strong>Transaction History</strong>
+                            <span>View your previous activity</span>
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <!-- RECENT TRANSACTIONS -->
+                <section class="dashboard-section">
+
+                    <div class="section-title">
+                        <div>
+                            <h2>Recent Transactions</h2>
+                            <p>Your latest account activities.</p>
+                        </div>
+
+                        <a href="transactions.html" class="view-all">
+                            View All →
+                        </a>
+                    </div>
+
+
+                    <div class="transaction-table">
+
+                        <div class="table-header">
+                            <span>TRANSACTION</span>
+                            <span>DATE</span>
+                            <span>TYPE</span>
+                            <span>AMOUNT</span>
+                            <span>STATUS</span>
+                        </div>
+
+
+                        <div class="transaction-row">
+                            <div class="transaction-name">
+                                <span class="transaction-symbol deposit-symbol">＋</span>
+                                <div>
+                                    <strong>Cash Deposit</strong>
+                                    <small>Account deposit</small>
+                                </div>
+                            </div>
+
+                            <span class="transaction-date">20 Nov 2026</span>
+                            <span class="transaction-type">Deposit</span>
+                            <strong class="amount-positive">+ PKR 15,000</strong>
+                            <span class="transaction-status">Completed</span>
+                        </div>
+
+
+                        <div class="transaction-row">
+                            <div class="transaction-name">
+                                <span class="transaction-symbol withdraw-symbol">－</span>
+                                <div>
+                                    <strong>Cash Withdrawal</strong>
+                                    <small>Account withdrawal</small>
+                                </div>
+                            </div>
+
+                            <span class="transaction-date">18 Nov 2026</span>
+                            <span class="transaction-type">Withdrawal</span>
+                            <strong class="amount-negative">- PKR 5,000</strong>
+                            <span class="transaction-status">Completed</span>
+                        </div>
+
+
+                        <div class="transaction-row">
+                            <div class="transaction-name">
+                                <span class="transaction-symbol transfer-symbol">⇄</span>
+                                <div>
+                                    <strong>Fund Transfer</strong>
+                                    <small>Money transfer</small>
+                                </div>
+                            </div>
+
+                            <span class="transaction-date">15 Nov 2026</span>
+                            <span class="transaction-type">Transfer</span>
+                            <strong class="amount-negative">- PKR 3,000</strong>
+                            <span class="transaction-status">Completed</span>
+                        </div>
+
+
+                        <div class="transaction-row">
+                            <div class="transaction-name">
+                                <span class="transaction-symbol deposit-symbol">＋</span>
+                                <div>
+                                    <strong>Cash Deposit</strong>
+                                    <small>Account deposit</small>
+                                </div>
+                            </div>
+
+                            <span class="transaction-date">12 Nov 2026</span>
+                            <span class="transaction-type">Deposit</span>
+                            <strong class="amount-positive">+ PKR 10,000</strong>
+                            <span class="transaction-status">Completed</span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- FOOTER -->
+                <footer class="dashboard-footer">
+                    <p>© 2026 Royal Finance Bank. Educational Project.</p>
+                    <span>Banking with Trust. Growing with You.</span>
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+
+</body>
+</html>

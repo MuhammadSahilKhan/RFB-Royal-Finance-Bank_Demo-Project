@@ -1,0 +1,527 @@
+
+/* ==============================
+   RFB - ROYAL FINANCE BANK
+   Main Website Styles
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #17243b;
+}
+
+
+/* NAVIGATION BAR */
+
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    padding: 22px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #14233d;
+    text-decoration: none;
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+
+.logo strong {
+    color: #c39a52;
+}
+
+.logo-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #14233d;
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #536075;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c39a52;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.login-btn {
+    color: #14233d;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.register-btn {
+    background-color: #14233d;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+
+    padding: 13px 21px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #c39a52;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 600px;
+    background-color: #f6f7f9;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 75px max(7%, calc((100% - 1150px) / 2));
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.hero-label,
+.section-label {
+    color: #b58a42;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    color: #14233d;
+    font-size: 58px;
+    line-height: 1.15;
+    margin-bottom: 23px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #c39a52;
+}
+
+.hero-description {
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 490px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background-color: #14233d;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background-color: #c39a52;
+}
+
+.secondary-btn {
+    border: 1px solid #14233d;
+    color: #14233d;
+}
+
+.secondary-btn:hover {
+    background-color: #14233d;
+    color: #ffffff;
+}
+
+.hero-note {
+    margin-top: 35px;
+    color: #667085;
+    font-size: 13px;
+}
+
+.gold-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #c39a52;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+
+/* HERO VISUAL */
+
+.hero-visual {
+    width: 450px;
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.visual-circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-one {
+    width: 330px;
+    height: 330px;
+    background-color: #e8e0d1;
+}
+
+.circle-two {
+    width: 260px;
+    height: 260px;
+    background-color: #d5c19c;
+    opacity: 0.55;
+}
+
+.bank-card {
+    width: 340px;
+    height: 210px;
+
+    position: relative;
+    z-index: 1;
+
+    padding: 25px;
+    border-radius: 15px;
+
+    background: linear-gradient(135deg, #172945, #0b1425);
+    color: #ffffff;
+
+    box-shadow: 0 25px 50px rgba(20, 35, 61, 0.25);
+    transform: rotate(-6deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-top,
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.card-chip {
+    color: #d7b56f;
+    font-weight: bold;
+}
+
+.card-middle p {
+    color: #d7b56f;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.card-middle h2 {
+    font-size: 23px;
+}
+
+.card-bottom {
+    color: #d8dce4;
+}
+
+
+/* SERVICES SECTION */
+
+.services {
+    max-width: 1250px;
+    margin: auto;
+    padding: 90px 35px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2,
+.about h2 {
+    color: #14233d;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    padding: 30px 25px;
+    border: 1px solid #e9ebef;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(20, 35, 61, 0.08);
+    border-color: #c39a52;
+}
+
+.service-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f5efe4;
+    color: #a77d36;
+
+    border-radius: 7px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+.service-card h3 {
+    color: #14233d;
+    font-size: 17px;
+    margin-bottom: 13px;
+}
+
+.service-card p {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ABOUT SECTION */
+
+.about {
+    background-color: #f6f7f9;
+    padding: 75px max(7%, calc((100% - 1150px) / 2));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about h2 {
+    max-width: 450px;
+    line-height: 1.4;
+}
+
+.about > p {
+    max-width: 500px;
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #101d33;
+    color: #ffffff;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.footer-logo {
+    color: #d7b56f;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.footer p {
+    color: #c4cad4;
+    font-size: 13px;
+}
+
+.footer-copy {
+    margin-top: 25px;
+    font-size: 12px !important;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-visual {
+        width: 350px;
+    }
+
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .navbar {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-buttons {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+        padding: 65px 20px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .bank-card {
+        width: 290px;
+    }
+
+    .services {
+        padding: 65px 20px;
+    }
+
+    .section-heading h2,
+    .about h2 {
+        font-size: 27px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 25px;
+        gap: 10px;
+    }
+
+}

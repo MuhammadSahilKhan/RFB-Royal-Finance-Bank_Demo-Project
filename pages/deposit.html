@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Deposit Money | RFB</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/banking.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="../index.html" class="sidebar-logo">
+                <span class="logo-icon">R</span>
+                <span>ROYAL <strong>FINANCE</strong></span>
+            </a>
+
+            <div class="sidebar-heading">MAIN MENU</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="dashboard.html#account" class="nav-item">
+                    <span class="nav-icon">▣</span>
+                    My Account
+                </a>
+
+                <a href="deposit.html" class="nav-item active">
+                    <span class="nav-icon">＋</span>
+                    Deposit Money
+                </a>
+
+                <a href="withdraw.html" class="nav-item">
+                    <span class="nav-icon">－</span>
+                    Withdraw Money
+                </a>
+
+                <a href="transfer.html" class="nav-item">
+                    <span class="nav-icon">⇄</span>
+                    Transfer Funds
+                </a>
+
+                <a href="transactions.html" class="nav-item">
+                    <span class="nav-icon">▤</span>
+                    Transactions
+                </a>
+
+            </nav>
+
+            <div class="sidebar-heading account-heading">ACCOUNT</div>
+
+            <nav class="sidebar-nav">
+
+                <a href="profile.html" class="nav-item">
+                    <span class="nav-icon">♙</span>
+                    My Profile
+                </a>
+
+                <a href="login.html" class="nav-item logout-link">
+                    <span class="nav-icon">↪</span>
+                    Logout
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-footer-logo">RFB</div>
+                <p>Royal Finance Bank</p>
+                <span>Banking with Trust.</span>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button class="menu-toggle" id="menuToggle"
+                        aria-label="Open navigation menu">
+                        ☰
+                    </button>
+
+                    <div>
+                        <p class="topbar-label">CUSTOMER PORTAL</p>
+                        <h2>Deposit Money</h2>
+                    </div>
+
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="welcome-text">
+                        <span>Welcome back,</span>
+                        <strong>Customer</strong>
+                    </div>
+
+                    <div class="profile-avatar">C</div>
+
+                </div>
+
+            </header>
+
+
+            <!-- PAGE BODY -->
+            <div class="dashboard-body">
+
+                <!-- PAGE INTRO -->
+                <section class="banking-intro">
+
+                    <div>
+                        <p class="banking-breadcrumb">
+                            Dashboard / Deposit Money
+                        </p>
+
+                        <h1>Deposit Money</h1>
+
+                        <p>
+                            Add funds to your bank account quickly and easily.
+                        </p>
+                    </div>
+
+                    <div class="banking-intro-icon">
+                        ＋
+                    </div>
+
+                </section>
+
+
+                <!-- ACCOUNT SUMMARY -->
+                <section class="deposit-summary">
+
+                    <div class="deposit-summary-icon">
+                        ▣
+                    </div>
+
+                    <div>
+                        <p>Depositing Into</p>
+                        <h3>Personal Account</h3>
+                        <span>Account Number: **** **** 4582</span>
+                    </div>
+
+                    <div class="deposit-summary-status">
+                        <span class="active-dot"></span>
+                        Active
+                    </div>
+
+                </section>
+
+
+                <!-- MAIN DEPOSIT AREA -->
+                <section class="deposit-layout">
+
+                    <!-- DEPOSIT FORM -->
+                    <div class="deposit-form-card">
+
+                        <div class="banking-section-heading">
+                            <h2>Deposit Details</h2>
+                            <p>Enter the amount and select your deposit method.</p>
+                        </div>
+
+
+                        <form id="depositForm">
+
+                            <div class="form-group">
+
+                                <label for="depositAmount">
+                                    Deposit Amount (PKR)
+                                </label>
+
+                                <div class="amount-input-wrapper">
+                                    <span>PKR</span>
+
+                                    <input
+                                        type="number"
+                                        id="depositAmount"
+                                        name="amount"
+                                        placeholder="Enter amount"
+                                        min="1"
+                                        step="1"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>Enter the amount you want to deposit.</small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="depositMethod">
+                                    Deposit Method
+                                </label>
+
+                                <select
+                                    id="depositMethod"
+                                    name="method"
+                                    required
+                                >
+
+                                    <option value="">Select deposit method</option>
+
+                                    <option value="Cash Deposit">
+                                        Cash Deposit
+                                    </option>
+
+                                    <option value="Bank Transfer">
+                                        Bank Transfer
+                                    </option>
+
+                                    <option value="Cheque Deposit">
+                                        Cheque Deposit
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="depositNote">
+                                    Description (Optional)
+                                </label>
+
+                                <textarea
+                                    id="depositNote"
+                                    name="description"
+                                    rows="3"
+                                    placeholder="Add a short description..."
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="deposit-notice">
+                                <span>ⓘ</span>
+
+                                <p>
+                                    Please check your deposit details before
+                                    submitting your request.
+                                </p>
+                            </div>
+
+
+                            <button type="submit" class="deposit-submit-btn">
+                                Confirm Deposit →
+                            </button>
+
+                        </form>
+
+
+                        <!-- RESULT MESSAGE -->
+                        <div id="depositMessage" class="deposit-message"
+                            role="status" aria-live="polite">
+                        </div>
+
+                    </div>
+
+
+                    <!-- INFORMATION CARD -->
+                    <aside class="deposit-info-card">
+
+                        <div class="deposit-info-icon">
+                            ✓
+                        </div>
+
+                        <h3>Secure Banking</h3>
+
+                        <p>
+                            Your banking information should always be handled
+                            securely.
+                        </p>
+
+                        <div class="info-divider"></div>
+
+                        <h4>Deposit Information</h4>
+
+                        <ul>
+                            <li>Enter a valid deposit amount.</li>
+                            <li>Select your preferred deposit method.</li>
+                            <li>Review your details before submitting.</li>
+                            <li>Check your transaction history afterward.</li>
+                        </ul>
+
+                        <div class="info-divider"></div>
+
+                        <div class="support-info">
+                            <span>Need assistance?</span>
+                            <strong>Contact Bank Support</strong>
+                        </div>
+
+                    </aside>
+
+                </section>
+
+
+                <!-- FOOTER -->
+                <footer class="dashboard-footer">
+                    <p>© 2026 Royal Finance Bank. Educational Project.</p>
+                    <span>Banking with Trust. Growing with You.</span>
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/deposit.js"></script>
+
+</body>
+</html>

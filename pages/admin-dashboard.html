@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Royal Finance Bank</title>
+
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <a href="../index.html" class="admin-sidebar-logo">
+            <span class="admin-logo-icon">R</span>
+            <span>ROYAL <strong>FINANCE</strong></span>
+        </a>
+
+        <div class="admin-sidebar-heading">ADMINISTRATION</div>
+
+        <nav class="admin-nav">
+
+            <a href="admin-dashboard.html" class="admin-nav-item active">
+                <span>▦</span>
+                Dashboard
+            </a>
+
+            <a href="#customers" class="admin-nav-item">
+                <span>♙</span>
+                Customers
+            </a>
+
+            <a href="#accounts" class="admin-nav-item">
+                <span>▣</span>
+                Accounts
+            </a>
+
+            <a href="#transactions" class="admin-nav-item">
+                <span>⇄</span>
+                Transactions
+            </a>
+
+        </nav>
+
+        <div class="admin-sidebar-heading">ACCOUNT</div>
+
+        <nav class="admin-nav">
+
+            <a href="admin-login.html" class="admin-nav-item admin-logout">
+                <span>↪</span>
+                Logout
+            </a>
+
+        </nav>
+
+        <div class="admin-sidebar-footer">
+            <div class="admin-footer-logo">RFB</div>
+            <p>Royal Finance Bank</p>
+            <span>Administration Portal</span>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="admin-main-content">
+
+        <!-- TOPBAR -->
+        <header class="admin-topbar">
+
+            <div class="admin-topbar-left">
+
+                <button class="admin-menu-toggle" id="adminMenuToggle">
+                    ☰
+                </button>
+
+                <div>
+                    <p class="admin-topbar-label">ADMINISTRATION PORTAL</p>
+                    <h2>Dashboard Overview</h2>
+                </div>
+
+            </div>
+
+            <div class="admin-topbar-right">
+
+                <div class="admin-welcome">
+                    <span>Welcome back,</span>
+                    <strong>Administrator</strong>
+                </div>
+
+                <div class="admin-avatar">A</div>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD BODY -->
+        <div class="admin-dashboard-body">
+
+            <div class="admin-page-intro">
+
+                <div>
+                    <span class="admin-section-label">BANK MANAGEMENT</span>
+                    <h1>Dashboard Overview</h1>
+                    <p>Monitor customers, accounts, and banking activities.</p>
+                </div>
+
+                <div class="admin-date" id="adminCurrentDate"></div>
+
+            </div>
+
+
+            <!-- STATISTICS CARDS -->
+            <section class="admin-stats-grid">
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-top">
+                        <span>Total Customers</span>
+                        <div class="admin-stat-icon gold-icon">♙</div>
+                    </div>
+
+                    <h2 id="totalCustomers">1,250</h2>
+                    <p>Registered customers</p>
+                </div>
+
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-top">
+                        <span>Total Accounts</span>
+                        <div class="admin-stat-icon blue-icon">▣</div>
+                    </div>
+
+                    <h2 id="totalAccounts">1,480</h2>
+                    <p>Bank accounts created</p>
+                </div>
+
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-top">
+                        <span>Total Transactions</span>
+                        <div class="admin-stat-icon green-icon">⇄</div>
+                    </div>
+
+                    <h2 id="totalTransactions">8,540</h2>
+                    <p>Recorded transactions</p>
+                </div>
+
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-top">
+                        <span>Active Accounts</span>
+                        <div class="admin-stat-icon purple-icon">✓</div>
+                    </div>
+
+                    <h2 id="activeAccounts">1,420</h2>
+                    <p>Currently active accounts</p>
+                </div>
+
+            </section>
+
+
+            <!-- QUICK ACTIONS -->
+            <section class="admin-quick-section">
+
+                <div class="admin-section-heading">
+                    <div>
+                        <h2>Quick Actions</h2>
+                        <p>Access important administration sections.</p>
+                    </div>
+                </div>
+
+                <div class="admin-quick-grid">
+
+                    <a href="#customers" class="admin-quick-card">
+                        <span class="quick-icon">♙</span>
+                        <div>
+                            <h3>Manage Customers</h3>
+                            <p>View customer records</p>
+                        </div>
+                        <span class="quick-arrow">→</span>
+                    </a>
+
+
+                    <a href="#accounts" class="admin-quick-card">
+                        <span class="quick-icon">▣</span>
+                        <div>
+                            <h3>View Accounts</h3>
+                            <p>Review account information</p>
+                        </div>
+                        <span class="quick-arrow">→</span>
+                    </a>
+
+
+                    <a href="#transactions" class="admin-quick-card">
+                        <span class="quick-icon">⇄</span>
+                        <div>
+                            <h3>Monitor Transactions</h3>
+                            <p>Review banking activities</p>
+                        </div>
+                        <span class="quick-arrow">→</span>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- CUSTOMER TABLE -->
+            <section class="admin-table-card" id="customers">
+
+                <div class="admin-table-header">
+
+                    <div>
+                        <h2>Recent Customers</h2>
+                        <p>Overview of recently registered customers.</p>
+                    </div>
+
+                    <span class="admin-view-label">CUSTOMER RECORDS</span>
+
+                </div>
+
+
+                <div class="admin-table-tools">
+
+                    <input
+                        type="text"
+                        id="customerSearch"
+                        placeholder="Search customers..."
+                    >
+
+                    <select id="customerStatusFilter">
+                        <option value="all">All Status</option>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+
+                </div>
+
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>Customer ID</th>
+                                <th>Customer Name</th>
+                                <th>Email Address</th>
+                                <th>Account Type</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="customerTableBody">
+
+                            <tr>
+                                <td>RFB1001</td>
+                                <td>Muhammad Sahil</td>
+                                <td>sahil@example.com</td>
+                                <td>Savings</td>
+                                <td><span class="status-active">Active</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>RFB1002</td>
+                                <td>Ali Khan</td>
+                                <td>ali@example.com</td>
+                                <td>Current</td>
+                                <td><span class="status-active">Active</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>RFB1003</td>
+                                <td>Ahmad Shah</td>
+                                <td>ahmad@example.com</td>
+                                <td>Savings</td>
+                                <td><span class="status-inactive">Inactive</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>RFB1004</td>
+                                <td>Usman Malik</td>
+                                <td>usman@example.com</td>
+                                <td>Current</td>
+                                <td><span class="status-active">Active</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>RFB1005</td>
+                                <td>Hamza Ahmed</td>
+                                <td>hamza@example.com</td>
+                                <td>Savings</td>
+                                <td><span class="status-active">Active</span></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                    <p id="noCustomersMessage" class="no-customers-message">
+                        No customers found.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- RECENT TRANSACTIONS -->
+            <section class="admin-table-card" id="transactions">
+
+                <div class="admin-table-header">
+
+                    <div>
+                        <h2>Recent Transactions</h2>
+                        <p>Latest banking activities in the system.</p>
+                    </div>
+
+                    <span class="admin-view-label">TRANSACTION MONITOR</span>
+
+                </div>
+
+
+                <div class="admin-table-wrapper">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Customer</th>
+                                <th>Transaction Type</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>TRX1001</td>
+                                <td>Muhammad Sahil</td>
+                                <td>Deposit</td>
+                                <td class="amount-positive">+ PKR 15,000</td>
+                                <td>20 Nov 2026</td>
+                                <td><span class="status-active">Completed</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>TRX1002</td>
+                                <td>Ali Khan</td>
+                                <td>Withdrawal</td>
+                                <td class="amount-negative">- PKR 5,000</td>
+                                <td>19 Nov 2026</td>
+                                <td><span class="status-active">Completed</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>TRX1003</td>
+                                <td>Ahmad Shah</td>
+                                <td>Transfer</td>
+                                <td class="amount-negative">- PKR 8,000</td>
+                                <td>18 Nov 2026</td>
+                                <td><span class="status-active">Completed</span></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="admin-dashboard-footer">
+                <p>© 2026 Royal Finance Bank. All Rights Reserved.</p>
+                <span>Banking with Trust. Growing with You.</span>
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/admin-dashboard.js"></script>
+
+</body>
+</html>
